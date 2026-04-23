@@ -10,9 +10,9 @@ const stats = [
 const projects = [
   {
     id: "almaty",
-    title: "Квартал Айманова",
+    title: "Клубный квартал Айманова",
     location: "Алматы, Бостандыкский район",
-    description: "Mixed-use квартал до 5 этажей. Жильё и коммерческие площади на пересечении ключевых артерий города.",
+    description: "Премиальный клубный квартал до 5 этажей по модели ЖК Estet. Неоклассика, закрытый двор, street retail. Бизнес-класс в малоэтажном формате.",
     tag: "Недвижимость",
     stage: "Выкуп земли",
   },
@@ -20,7 +20,7 @@ const projects = [
     id: "borovoe",
     title: "Боровое Парк",
     location: "Акмолинская область",
-    description: "Туристический комплекс европейского уровня. Природный парк с круглогодичной инфраструктурой.",
+    description: "Туристический комплекс европейского уровня. Природный парк с круглогодичной инфраструктурой по модели Center Parcs.",
     tag: "Туризм",
     stage: "Концепция",
   },
@@ -135,24 +135,24 @@ export default function Home() {
               <div className="text-2xl text-gold mb-4 font-semibold">01</div>
               <h3 className="text-lg font-medium mb-3">Земля дорожает</h3>
               <p className="text-sm text-text-muted leading-relaxed">
-                Стоимость земли в Алматы растёт на 15-25% ежегодно. 
-                Каждый квартал промедления увеличивает стоимость входа.
+                Стоимость земли в Бостандыкском районе растёт на 15-25% ежегодно. 
+                Каждый квартал промедления — миллионы к стоимости входа.
               </p>
             </div>
             <div className="p-6">
               <div className="text-2xl text-gold mb-4 font-semibold">02</div>
-              <h3 className="text-lg font-medium mb-3">Туризм на подъёме</h3>
+              <h3 className="text-lg font-medium mb-3">Дефицит малоэтажки</h3>
               <p className="text-sm text-text-muted leading-relaxed">
-                Казахстан активно развивает туристическую инфраструктуру. 
-                Государственные программы поддержки и рост потока.
+                Премиальных клубных домов до 5 этажей в Алматы единицы. 
+                Спрос растёт, предложения нет. Окно возможностей.
               </p>
             </div>
             <div className="p-6">
               <div className="text-2xl text-gold mb-4 font-semibold">03</div>
-              <h3 className="text-lg font-medium mb-3">Дубай растёт</h3>
+              <h3 className="text-lg font-medium mb-3">Дубай на подъёме</h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 Рынок недвижимости Дубая показывает устойчивый рост. 
-                Ранний вход = максимальная доходность.
+                Ранний вход сейчас = максимальная доходность через 2-3 года.
               </p>
             </div>
           </div>
