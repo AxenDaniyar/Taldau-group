@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0f1a;
-  --foreground: #e8e6e1;
+  --background: #f5f3ef;
+  --foreground: #1a1a1a;
   --navy: #0a0f1a;
   --navy-light: #111827;
   --navy-mid: #1a2332;
-  --gold: #c9a84c;
-  --gold-light: #d4b95e;
-  --gold-dark: #a88a3a;
-  --text-muted: #9ca3af;
-  --text-dim: #6b7280;
-  --border: #374151;
+  --surface: #ffffff;
+  --surface-dim: #ede9e3;
+  --gold: #b8942e;
+  --gold-light: #c9a84c;
+  --gold-dark: #8a6f22;
+  --text-muted: #5c5c5c;
+  --text-dim: #8a8a8a;
+  --border: #e0dbd3;
+  --border-dark: #2a3444;
 }
 
 @theme inline {
@@ -20,12 +23,15 @@
   --color-navy: var(--navy);
   --color-navy-light: var(--navy-light);
   --color-navy-mid: var(--navy-mid);
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
   --color-text-muted: var(--text-muted);
   --color-text-dim: var(--text-dim);
   --color-border: var(--border);
+  --color-border-dark: var(--border-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -41,7 +47,7 @@ html {
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #c9a84c, #d4b95e, #a88a3a);
+  background: linear-gradient(135deg, #b8942e, #c9a84c, #8a6f22);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -50,14 +56,24 @@ html {
 .gold-line {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, #c9a84c, #d4b95e);
+  background: linear-gradient(90deg, #b8942e, #c9a84c);
 }
 
-.card-hover {
+.card-dark {
+  background: #0a0f1a;
+  color: #e8e6e1;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
-.card-hover:hover {
+.card-dark:hover {
   transform: translateY(-4px);
-  border-color: var(--gold);
-  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.1);
+  border-color: #b8942e;
+  box-shadow: 0 12px 40px rgba(10, 15, 26, 0.25);
+}
+.card-dark .card-muted {
+  color: #9ca3af;
+}
+.card-dark .card-dim {
+  color: #6b7280;
 }

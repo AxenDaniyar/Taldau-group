@@ -45,20 +45,19 @@ const projects = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light to-navy" />
+      {/* Hero — dark section */}
+      <section className="relative min-h-[85vh] flex items-center bg-navy">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold rounded-full blur-[128px]" />
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gold rounded-full blur-[96px]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 py-24">
           <div className="gold-line mb-8" />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6 text-white">
             Инвестиции в<br />
             <span className="text-gradient-gold">реальные активы</span>
           </h1>
-          <p className="text-lg md:text-xl text-text-muted max-w-2xl mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/60 max-w-2xl mb-10 leading-relaxed">
             Недвижимость, туризм и международные активы. Казахстан и Дубай. 
             Выверенные решения для долгосрочного роста капитала.
           </p>
@@ -71,7 +70,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-gold/30 text-gold rounded hover:bg-gold/10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-white/20 text-white rounded hover:bg-white/10 transition-colors"
             >
               Стать инвестором
             </Link>
@@ -79,8 +78,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-y border-border bg-navy-light/50">
+      {/* Stats — light */}
+      <section className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
@@ -93,7 +92,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Projects — light bg, dark cards */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="gold-line mb-6" />
@@ -106,32 +105,32 @@ export default function Home() {
               <Link
                 key={p.id}
                 href={`/projects#${p.id}`}
-                className="card-hover block p-8 rounded-lg border border-gold/20 bg-navy-light/60"
+                className="card-dark block p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 text-xs bg-gold/10 text-gold rounded-full border border-gold/20">
+                  <span className="px-3 py-1 text-xs bg-gold/15 text-gold-light rounded-full border border-gold/20">
                     {p.tag}
                   </span>
-                  <span className="px-3 py-1 text-xs bg-navy-mid text-text-dim rounded-full">
+                  <span className="px-3 py-1 text-xs bg-white/5 text-white/40 rounded-full">
                     {p.stage}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-                <p className="text-sm text-text-dim mb-3">{p.location}</p>
-                <p className="text-sm text-text-muted leading-relaxed">{p.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">{p.title}</h3>
+                <p className="text-sm card-dim mb-3">{p.location}</p>
+                <p className="text-sm card-muted leading-relaxed">{p.description}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why now */}
-      <section className="py-24 bg-navy-light/30">
+      {/* Why now — subtle bg */}
+      <section className="py-24 bg-surface-dim">
         <div className="max-w-7xl mx-auto px-6">
           <div className="gold-line mb-6" />
           <h2 className="text-3xl md:text-4xl font-semibold mb-12">Почему сейчас</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6">
+            <div className="p-6 bg-surface rounded-lg border border-border">
               <div className="text-2xl text-gold mb-4 font-semibold">01</div>
               <h3 className="text-lg font-medium mb-3">Земля дорожает</h3>
               <p className="text-sm text-text-muted leading-relaxed">
@@ -139,7 +138,7 @@ export default function Home() {
                 Каждый квартал промедления — миллионы к стоимости входа.
               </p>
             </div>
-            <div className="p-6">
+            <div className="p-6 bg-surface rounded-lg border border-border">
               <div className="text-2xl text-gold mb-4 font-semibold">02</div>
               <h3 className="text-lg font-medium mb-3">Дефицит малоэтажки</h3>
               <p className="text-sm text-text-muted leading-relaxed">
@@ -147,7 +146,7 @@ export default function Home() {
                 Спрос растёт, предложения нет. Окно возможностей.
               </p>
             </div>
-            <div className="p-6">
+            <div className="p-6 bg-surface rounded-lg border border-border">
               <div className="text-2xl text-gold mb-4 font-semibold">03</div>
               <h3 className="text-lg font-medium mb-3">Дубай на подъёме</h3>
               <p className="text-sm text-text-muted leading-relaxed">
@@ -159,13 +158,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
+      {/* CTA — dark */}
+      <section className="py-24 bg-navy">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-white">
             Готовы <span className="text-gradient-gold">инвестировать</span>?
           </h2>
-          <p className="text-text-muted mb-10">
+          <p className="text-white/50 mb-10">
             Оставьте заявку — мы свяжемся и расскажем детали по интересующему проекту.
           </p>
           <Link
