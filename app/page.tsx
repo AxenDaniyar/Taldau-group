@@ -106,7 +106,7 @@ export default function Home() {
               <Link
                 key={p.id}
                 href={`/projects#${p.id}`}
-                className="card-hover block p-8 rounded-lg border border-border bg-navy-light/50"
+                className="card-hover block p-8 rounded-lg border border-gold/20 bg-navy-light/60"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="px-3 py-1 text-xs bg-gold/10 text-gold rounded-full border border-gold/20">
