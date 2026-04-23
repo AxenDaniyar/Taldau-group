@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0f1a;
+  --foreground: #e8e6e1;
+  --navy: #0a0f1a;
+  --navy-light: #111827;
+  --navy-mid: #1a2332;
+  --gold: #c9a84c;
+  --gold-light: #d4b95e;
+  --gold-dark: #a88a3a;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --border: #1f2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-navy-mid: var(--navy-mid);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c9a84c, #d4b95e, #a88a3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a84c, #d4b95e);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.1);
+}
