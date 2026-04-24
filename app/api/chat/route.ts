@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${OPENROUTER_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "anthropic/claude-haiku-4-5-20251001",
+        model: "anthropic/claude-haiku-4-5",
         messages: apiMessages,
         max_tokens: 2048,
         temperature: 0.7,
